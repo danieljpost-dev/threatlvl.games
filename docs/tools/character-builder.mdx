@@ -1,0 +1,119 @@
+---
+sidebar_position: 1
+title: Character Builder
+---
+
+# Character Builder
+
+The Character Builder is a comprehensive tool for creating and managing 5e-compatible characters. Whether you're rolling up a new hero or tracking an existing character's progression, our builder handles all the complexity of character creation.
+
+## Features
+
+### Character Creation
+
+- **Step-by-Step Wizard**: Guided character creation process
+- **Race Selection**: Choose from all SRD races with racial traits
+- **Class Options**: Full support for all SRD classes and subclasses
+- **Ability Scores**: Standard array, point buy, or manual entry
+- **Background**: Select backgrounds with skill proficiencies and features
+
+### Character Management
+
+- **Level Progression**: Automatically calculate HP, proficiency bonuses, and features
+- **Spell Management**: Track known spells and spell slots for spellcasters
+- **Equipment**: Manage inventory with automatic weight and value calculations
+- **Notes**: Add custom notes, backstory, and campaign-specific information
+
+### Digital Character Sheet
+
+Our digital character sheet provides:
+
+- Quick access to all character statistics
+- One-click ability checks and saving throws
+- Attack and damage roll automation
+- Spell slot tracking with automatic rest recovery
+- Inspiration and death save tracking
+
+## Getting Started
+
+### Creating Your First Character
+
+1. Navigate to the Character Builder
+2. Click "New Character"
+3. Follow the step-by-step wizard:
+   - Choose your race
+   - Select your class
+   - Assign ability scores
+   - Pick a background
+   - Select equipment
+   - Add finishing touches
+
+### Leveling Up
+
+When your character gains a level:
+
+1. Open your character sheet
+2. Click "Level Up"
+3. Follow the prompts to:
+   - Increase hit points
+   - Gain new features
+   - Improve ability scores (if applicable)
+   - Learn new spells (if applicable)
+
+## API Integration
+
+The Character Builder API allows you to:
+
+- Create characters programmatically
+- Export character data in JSON format
+- Import characters from other sources
+- Sync characters across devices
+
+### Example API Call
+
+```javascript
+// Get character data
+fetch('https://api.threatlvl.games/v1/character/12345')
+  .then(response => response.json())
+  .then(character => {
+    console.log(character.name);
+    console.log(character.level);
+  });
+```
+
+## Tips & Tricks
+
+### Quick Rolling
+
+- **Ctrl+Click** on any skill to roll with advantage
+- **Shift+Click** to roll with disadvantage
+- **Alt+Click** to roll without modifiers
+
+### Character Backup
+
+Always export your character data regularly:
+1. Open character sheet
+2. Click "Export"
+3. Save the JSON file to your computer
+
+### Sharing Characters
+
+Share your character with your game master:
+1. Click "Share"
+2. Generate a shareable link
+3. Set permissions (view-only or edit)
+
+## Frequently Asked Questions
+
+### Can I import characters from other platforms?
+
+Yes! We support imports from common formats. Go to Import → Select Format → Upload File.
+
+### Is my character data secure?
+
+All character data is encrypted and stored securely. You can also export backups for local storage.
+
+### Can I use homebrew content?
+
+Yes! Premium users can add custom races, classes, and items to their characters.
+

@@ -1,0 +1,175 @@
+---
+sidebar_position: 2
+title: Dice Roller
+---
+
+# Dice Roller
+
+The ThreatLvl Games Dice Roller is a powerful and flexible dice rolling engine that supports everything from simple d20 rolls to complex multi-die expressions with modifiers.
+
+## Features
+
+### Basic Rolling
+
+Roll any standard polyhedral dice:
+- d4, d6, d8, d10, d12, d20, d100
+
+### Advanced Features
+
+- **Advantage/Disadvantage**: Automatic highest/lowest selection
+- **Modifiers**: Add, subtract, multiply, or divide results
+- **Multiple Dice**: Roll multiple dice at once (e.g., 3d6)
+- **Keep/Drop**: Keep or drop highest/lowest dice (e.g., 4d6kh3)
+- **Exploding Dice**: Re-roll on maximum values
+- **Critical Success/Failure**: Automatic highlighting
+
+### Roll History
+
+- View your last 50 rolls
+- Re-roll previous expressions
+- Export roll history for record keeping
+
+## Dice Notation
+
+### Basic Syntax
+
+```
+XdY+Z
+```
+
+Where:
+- **X** = Number of dice to roll
+- **Y** = Type of die (number of sides)
+- **Z** = Modifier to add
+
+### Examples
+
+| Expression | Description |
+|------------|-------------|
+| `d20` | Roll a single d20 |
+| `2d6` | Roll two six-sided dice |
+| `1d8+3` | Roll a d8 and add 3 |
+| `3d6-2` | Roll three d6 and subtract 2 |
+
+### Advanced Syntax
+
+#### Advantage/Disadvantage
+
+```
+2d20kh1  // Roll with advantage (keep highest)
+2d20kl1  // Roll with disadvantage (keep lowest)
+```
+
+#### Keep/Drop Dice
+
+```
+4d6kh3   // Roll 4d6, keep highest 3 (ability score generation)
+5d8kl2   // Roll 5d8, keep lowest 2
+4d6dh1   // Roll 4d6, drop highest 1
+```
+
+#### Exploding Dice
+
+```
+3d6!     // Each 6 rolls an additional d6
+2d10!!   // Unlimited exploding (re-roll any max value)
+```
+
+#### Reroll
+
+```
+4d6r1    // Reroll any 1s once
+3d8rr2   // Reroll any 2s unlimited times
+```
+
+## Using the Dice Roller
+
+### Quick Roll
+
+1. Enter your dice expression in the input field
+2. Press Enter or click "Roll"
+3. View your result and breakdown
+
+### Saved Rolls
+
+Create shortcuts for commonly used rolls:
+
+1. Click "Save Roll"
+2. Enter a name (e.g., "Fireball", "Greatsword Attack")
+3. Access from the Quick Rolls menu
+
+### Roll Macros
+
+Create complex macros that combine multiple rolls:
+
+```javascript
+// Attack macro example
+{
+  name: "Longsword Attack",
+  rolls: [
+    { name: "Attack Roll", expression: "1d20+5" },
+    { name: "Damage", expression: "1d8+3" }
+  ]
+}
+```
+
+## API Integration
+
+### Roll via API
+
+```javascript
+// Simple roll
+fetch('https://api.threatlvl.games/v1/dice/roll', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ expression: '2d20kh1+5' })
+})
+.then(response => response.json())
+.then(result => console.log(result));
+```
+
+### Response Format
+
+```json
+{
+  "expression": "2d20kh1+5",
+  "total": 18,
+  "breakdown": [
+    { "die": "d20", "roll": 13, "kept": true },
+    { "die": "d20", "roll": 7, "kept": false }
+  ],
+  "modifier": 5
+}
+```
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Enter` | Roll dice |
+| `Ctrl+A` | Roll with advantage |
+| `Ctrl+D` | Roll with disadvantage |
+| `Ctrl+R` | Clear input |
+| `↑` | Previous roll |
+| `↓` | Next roll |
+
+## Tips & Tricks
+
+### Quick Advantage/Disadvantage
+
+Type `adv` or `dis` before your roll:
+- `adv 1d20+5` → Rolls with advantage
+- `dis 1d20+3` → Rolls with disadvantage
+
+### Roll for the Table
+
+Use the "Roll for All" feature to roll initiative or ability checks for an entire party:
+
+1. Select characters/NPCs
+2. Choose roll type
+3. Click "Roll for All"
+
+### Custom Dice Sets
+
+Create themed dice sets with custom colors and sound effects in Settings → Dice Customization.
+
