@@ -1,0 +1,43 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Install Zola
+        run: |
+          wget https://github.com/getzola/zola/releases/download/v0.18.0/zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv zola /usr/local/bin/
+      
+      - name: Build site
+        run: zola build
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      
+      - name: Deploy to S3
+        run: |
+          aws s3 sync public/ s3://threatlvl-staging --delete --acl public-read
+      
+      - name: Invalidate CloudFront cache
+        if: ${{ vars.AWS_CLOUDFRONT_STAGING_ID }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ vars.AWS_CLOUDFRONT_STAGING_ID }} \
+            --paths "/*"
+

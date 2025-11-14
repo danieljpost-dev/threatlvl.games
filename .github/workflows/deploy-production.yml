@@ -1,0 +1,43 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: production
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Install Zola
+        run: |
+          wget https://github.com/getzola/zola/releases/download/v0.18.0/zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv zola /usr/local/bin/
+      
+      - name: Build site
+        run: zola build
+      
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+      
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+      
+      - name: Deploy to GCS
+        run: |
+          gsutil -m rsync -r -d public/ gs://threatlvl.games
+      
+      - name: Invalidate CDN cache
+        if: ${{ vars.GCP_CDN_URL_MAP }}
+        run: |
+          gcloud compute url-maps invalidate-cdn-cache ${{ vars.GCP_CDN_URL_MAP }} --path "/*"
+

@@ -1,0 +1,35 @@
+name: Deploy to Testing
+
+on:
+  push:
+    branches:
+      - testing
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+jobs:
+  deploy-testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Install Zola
+        run: |
+          wget https://github.com/getzola/zola/releases/download/v0.18.0/zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv zola /usr/local/bin/
+      
+      - name: Build site
+        run: zola build
+      
+      - name: Deploy to GitHub Pages (testing)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages-testing
+          commit_message: "Deploy testing build - ${{ github.sha }}"
+
