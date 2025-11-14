@@ -1,0 +1,211 @@
++++
+title = "Spell Tracker"
+description = "Manage spells, spell slots, and spellcasting"
+weight = 4
++++
+
+# Spell Tracker
+
+The Spell Tracker is a comprehensive spellcasting management tool that helps players and game masters track spell slots, prepared spells, and quickly reference spell details during gameplay.
+
+## Features
+
+### Spell Slot Management
+
+- **Automatic Tracking**: Track spell slots by level (1st-9th)
+- **Quick Recovery**: Mark slots used and reset on rest
+- **Warlock Pact Magic**: Special support for pact magic slots
+- **Multi-Class Support**: Handle complex multi-class spellcasting
+
+### Spell Library
+
+Access the complete SRD spell list:
+- **600+ Spells**: All spells from the System Reference Document
+- **Advanced Search**: Filter by class, level, school, and more
+- **Quick Reference**: View full spell descriptions
+- **Favorites**: Mark commonly used spells
+
+### Prepared Spell Management
+
+- **Preparation Tracking**: Mark which spells are prepared
+- **Class Limits**: Automatic calculation of prepared spell limits
+- **Ritual Tracking**: Identify ritual spells
+- **Concentration**: Flag concentration spells
+
+## Using the Spell Tracker
+
+### Setting Up Your Spellcaster
+
+1. Select your class (or classes)
+2. Enter your character level
+3. Set your spellcasting ability score
+4. Choose your known/prepared spells
+
+### Casting Spells
+
+To cast a spell:
+1. Select the spell from your prepared list
+2. Choose spell slot level (if upcasting)
+3. Click "Cast"
+4. The appropriate spell slot is automatically marked as used
+
+### Managing Spell Slots
+
+#### Short Rest
+- Click "Short Rest" to recover Warlock pact magic slots
+- Recharge racial abilities and limited-use features
+
+#### Long Rest
+- Click "Long Rest" to restore all spell slots
+- Reset prepared spells (if applicable)
+
+## Spell Search & Filters
+
+### Search Options
+
+Filter spells by:
+- **Class**: Wizard, Cleric, Druid, etc.
+- **Level**: Cantrip through 9th level
+- **School**: Evocation, Abjuration, etc.
+- **Casting Time**: Action, bonus action, reaction, ritual
+- **Range**: Self, touch, ranged
+- **Components**: Verbal, somatic, material
+- **Concentration**: Yes/no
+- **Ritual**: Yes/no
+
+### Advanced Search
+
+Use advanced search syntax:
+```
+fire damage 3rd level
+healing bonus action
+concentration evocation
+ritual wizard
+```
+
+## Spell Details
+
+Each spell entry includes:
+
+### Basic Information
+- Spell level and school
+- Casting time
+- Range and duration
+- Components required
+
+### Mechanical Details
+- Attack type (spell attack or saving throw)
+- Damage or healing dice
+- Scaling at higher levels
+- Area of effect
+
+### Additional Notes
+- Full spell description
+- Material component details
+- Concentration requirements
+- Combat usage tips
+
+## Multi-Class Spellcasting
+
+The Spell Tracker automatically handles multi-class spellcasting:
+
+### Spell Slot Calculation
+```javascript
+// Example: Fighter 3 / Wizard 5
+{
+  classes: [
+    { name: "Fighter", level: 3, subclass: "Eldritch Knight" },
+    { name: "Wizard", level: 5 }
+  ],
+  // Automatically calculates: 4/3/3/1 spell slots
+}
+```
+
+### Spells Known
+- Tracks spells known per class separately
+- Respects class-specific preparation rules
+- Manages cantrips from multiple sources
+
+## Warlock Pact Magic
+
+Special handling for Warlocks:
+- Pact magic slots separate from regular slots
+- Short rest recovery
+- Uniform slot level based on warlock level
+- Eldritch Invocations tracking
+
+## Spell Cards
+
+Generate printable spell cards:
+1. Select spells to print
+2. Click "Generate Cards"
+3. Print or save PDF
+4. Cut along guides for physical reference cards
+
+## API Integration
+
+### Query Spell Database
+
+```javascript
+// Search for spells
+fetch('https://api.threatlvl.games/v1/spells/search?class=wizard&level=3')
+  .then(response => response.json())
+  .then(spells => console.log(spells));
+```
+
+### Track Spell Slots
+
+```javascript
+// Update spell slots
+fetch('https://api.threatlvl.games/v1/character/12345/spells/cast', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    spellId: 'fireball',
+    slotLevel: 3
+  })
+});
+```
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+F` | Focus spell search |
+| `1-9` | Quick cast prepared spell (position) |
+| `Ctrl+R` | Short rest |
+| `Ctrl+L` | Long rest |
+| `Ctrl+P` | Toggle prepared |
+| `Ctrl+K` | View spell details |
+
+## Tips & Tricks
+
+### Concentration Reminder
+
+Enable concentration tracking:
+1. When you cast a concentration spell, it's flagged
+2. Casting another concentration spell prompts you
+3. Track concentration saving throws
+
+### Upcasting Calculator
+
+Quickly calculate upcast damage:
+- Select spell
+- Choose higher-level slot
+- View increased effects automatically
+
+### Custom Spells
+
+Add homebrew spells:
+1. Go to Settings → Custom Content
+2. Click "Add Custom Spell"
+3. Fill in spell details
+4. Available for all your characters
+
+### Spell Component Tracker
+
+Track material components:
+1. Enable in Settings
+2. Deduct components when casting
+3. Track component pouch contents
+

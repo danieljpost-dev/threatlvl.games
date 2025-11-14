@@ -1,0 +1,272 @@
++++
+title = "Getting Started"
+description = "Get started with ThreatLvl Games"
+weight = 1
++++
+
+# Getting Started with ThreatLvl Games
+
+Welcome to ThreatLvl Games! This guide will help you set up your account and start using our 5e-compatible online game tools.
+
+## Account Setup
+
+### Creating an Account
+
+1. Visit [threatlvl.games](https://threatlvl.games)
+2. Click "Sign Up" in the top-right corner
+3. Enter your email and create a password
+4. Verify your email address
+5. Complete your profile
+
+### Account Types
+
+We offer two account tiers:
+
+#### Free Account
+- Access to all core tools
+- Store up to 5 characters
+- Save up to 10 encounters
+- Basic API access (100 requests/day)
+
+#### Premium Account
+- Unlimited characters and encounters
+- Homebrew content support
+- Advanced API access (10,000 requests/day)
+- Priority support
+- Early access to new features
+
+## Your First Campaign
+
+### Creating a Campaign
+
+1. Navigate to "Campaigns" in the main menu
+2. Click "New Campaign"
+3. Fill in campaign details:
+   - **Name**: Your campaign title
+   - **Description**: Brief summary
+   - **System**: 5th Edition (default)
+   - **Setting**: Choose or create custom
+
+4. Click "Create Campaign"
+
+### Inviting Players
+
+1. Open your campaign
+2. Click "Invite Players"
+3. Choose invitation method:
+   - Email invitations
+   - Share invite link
+   - Generate invite code
+4. Send to your players
+
+### Player Setup
+
+When players join:
+1. They receive invitation
+2. Create account (if needed)
+3. Accept campaign invitation
+4. Create their character
+
+## Using the Tools
+
+### For Game Masters
+
+#### Session Preparation
+
+1. **Plan Encounters**
+   - Use Encounter Builder
+   - Balance for your party
+   - Save to campaign
+
+2. **Prepare NPCs**
+   - Add important NPCs to campaign
+   - Set stats and notes
+   - Link to encounters
+
+3. **Review Spell Lists**
+   - Check player spell selections
+   - Prepare for common spell effects
+   - Note concentration spells
+
+#### During the Session
+
+1. **Initiative Tracker**
+   - Start combat encounters
+   - Track HP and conditions
+   - Manage turn order
+
+2. **Dice Roller**
+   - Roll for NPCs
+   - Make secret checks
+   - Verify player rolls
+
+3. **Quick Reference**
+   - Look up monster stats
+   - Check spell effects
+   - Reference rules
+
+### For Players
+
+#### Character Creation
+
+1. Open Character Builder
+2. Follow creation wizard
+3. Save character to campaign
+4. Share with game master
+
+#### During the Session
+
+1. **Character Sheet**
+   - Reference stats and abilities
+   - Track HP and resources
+   - Update inventory
+
+2. **Spell Management**
+   - Track spell slots
+   - Quick-reference spell effects
+   - Mark concentration
+
+3. **Dice Rolling**
+   - Roll ability checks
+   - Make attack rolls
+   - Save frequently used rolls
+
+## Common Workflows
+
+### Starting a Session
+
+1. **GM Opens Initiative Tracker**
+   - Loads saved encounters
+   - Adds player characters
+
+2. **Players Open Character Sheets**
+   - Review abilities and spells
+   - Check current HP and resources
+
+3. **Everyone Joins Voice/Video**
+   - Use Discord, Zoom, etc.
+   - Share screens as needed
+
+### Running Combat
+
+1. **GM Starts Encounter**
+   - Adds combatants
+   - Rolls initiative
+   - Describes scene
+
+2. **Turn Order**
+   - Initiative Tracker shows current turn
+   - Player takes actions
+   - GM updates HP and effects
+
+3. **End of Combat**
+   - Award XP
+   - Distribute loot
+   - Allow short rest if needed
+
+### Ending a Session
+
+1. **Update Characters**
+   - Players save changes
+   - Note quest progress
+   - Update inventory
+
+2. **GM Takes Notes**
+   - Record important events
+   - Save combat logs
+   - Plan next session
+
+## Integration with Virtual Tabletops
+
+ThreatLvl Games works alongside popular VTTs:
+
+### Roll20
+- Use for maps and tokens
+- Use ThreatLvl for character management
+- Share dice rolls both places
+
+### Foundry VTT
+- Import characters via API
+- Sync initiative tracker
+- Use ThreatLvl for prep work
+
+### Theater of the Mind
+- No map needed
+- Full toolkit in ThreatLvl
+- Focus on narrative
+
+## Mobile Usage
+
+### Mobile Web App
+
+Access from mobile browser:
+- Responsive design
+- Touch-friendly interface
+- All features available
+
+### Quick Actions
+
+Optimized mobile features:
+- Swipe to change initiative
+- Tap to roll dice
+- Quick HP adjustment
+
+## Offline Mode
+
+Some features work offline:
+- View character sheets
+- Roll dice
+- Reference saved content
+
+Sync when back online:
+- Character updates
+- Combat logs
+- New encounters
+
+## Getting Help
+
+### Documentation
+
+- Browse these docs
+- Search for specific topics
+- Check FAQ sections
+
+### Community Support
+
+- Join our Discord server
+- Ask questions in forums
+- Share tips with other users
+
+### Contact Support
+
+For technical issues:
+- Email: support@threatlvl.games
+- Response within 24 hours
+- Premium users: priority support
+
+## Next Steps
+
+Now that you're set up:
+
+1. **Explore the Tools**
+   - Try each tool individually
+   - Create test content
+   - Familiarize yourself with features
+
+2. **Set Up Your Campaign**
+   - Create your campaign
+   - Invite your players
+   - Build your first encounters
+
+3. **Read Tool-Specific Guides**
+   - [Character Builder](/docs/tools/character-builder/)
+   - [Initiative Tracker](/docs/tools/initiative-tracker/)
+   - [Encounter Builder](/docs/tools/encounter-builder/)
+
+4. **Join the Community**
+   - Share your experiences
+   - Get tips from other GMs
+   - Request features
+
+Happy gaming, and may your rolls be high!
+

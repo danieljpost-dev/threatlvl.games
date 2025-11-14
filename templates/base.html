@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value="en") }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+    
+    <!-- RSS Feed -->
+    {% if config.generate_feed %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}">
+    {% endif %}
+    
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container">
+            <div class="nav-wrapper">
+                <a href="{{ get_url(path="/") }}" class="logo">
+                    <span class="logo-text">ThreatLvl Games</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    {% if config.extra.menu %}
+                    {% for item in config.extra.menu %}
+                    <li><a href="{{ item.url | safe }}">{{ item.name }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>ThreatLvl Games</h3>
+                    <p>Professional 5e-compatible online game tools for game masters and players.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/docs/tools/character-builder/">Character Builder</a></li>
+                        <li><a href="/docs/tools/dice-roller/">Dice Roller</a></li>
+                        <li><a href="/docs/tools/initiative-tracker/">Initiative Tracker</a></li>
+                        <li><a href="/docs/tools/spell-tracker/">Spell Tracker</a></li>
+                        <li><a href="/docs/tools/encounter-builder/">Encounter Builder</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/docs/">Documentation</a></li>
+                        <li><a href="/docs/guides/getting-started/">Getting Started</a></li>
+                        <li><a href="/docs/guides/api-reference/">API Reference</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Community</h4>
+                    <ul>
+                        {% if config.extra.social %}
+                        {% if config.extra.social.discord %}
+                        <li><a href="{{ config.extra.social.discord }}">Discord</a></li>
+                        {% endif %}
+                        {% if config.extra.social.twitter %}
+                        <li><a href="{{ config.extra.social.twitter }}">Twitter</a></li>
+                        {% endif %}
+                        {% if config.extra.social.github %}
+                        <li><a href="{{ config.extra.social.github }}">GitHub</a></li>
+                        {% endif %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ThreatLvl Games. Built with <a href="https://www.getzola.org/">Zola</a>.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

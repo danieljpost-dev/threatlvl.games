@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+{% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}
+
+{% block content %}
+<div class="docs-layout">
+    <aside class="docs-sidebar">
+        <nav class="docs-nav">
+            <ul>
+                <li><a href="/docs/">Documentation Home</a></li>
+                
+                <li class="nav-section">
+                    <span class="nav-section-title">Tools</span>
+                    <ul>
+                        <li><a href="/docs/tools/character-builder/">Character Builder</a></li>
+                        <li><a href="/docs/tools/dice-roller/">Dice Roller</a></li>
+                        <li><a href="/docs/tools/encounter-builder/">Encounter Builder</a></li>
+                        <li><a href="/docs/tools/spell-tracker/">Spell Tracker</a></li>
+                        <li><a href="/docs/tools/initiative-tracker/">Initiative Tracker</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-section">
+                    <span class="nav-section-title">Guides</span>
+                    <ul>
+                        <li><a href="/docs/guides/getting-started/">Getting Started</a></li>
+                        <li><a href="/docs/guides/integration/">Integration Guide</a></li>
+                        <li><a href="/docs/guides/api-reference/">API Reference</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <div class="docs-content">
+        <article class="content-article">
+            <h1>{{ section.title }}</h1>
+            {{ section.content | safe }}
+            
+            {% if section.pages %}
+            <div class="page-list">
+                <h2>In this section:</h2>
+                <ul>
+                {% for page in section.pages %}
+                    <li>
+                        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                        {% if page.description %}
+                        <p>{{ page.description }}</p>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </article>
+    </div>
+</div>
+{% endblock content %}
+

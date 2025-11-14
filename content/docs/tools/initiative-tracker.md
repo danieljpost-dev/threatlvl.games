@@ -1,0 +1,276 @@
++++
+title = "Initiative Tracker"
+description = "Track combat initiative, HP, and conditions"
+weight = 5
++++
+
+# Initiative Tracker
+
+The Initiative Tracker is a powerful combat management tool that automates turn order, tracks hit points and conditions, and keeps combat flowing smoothly for game masters running 5e-compatible games.
+
+## Features
+
+### Combat Management
+
+- **Automatic Initiative**: Roll for all combatants at once
+- **Turn Tracking**: Visual indicator of whose turn it is
+- **HP Tracking**: Track current, max, and temporary HP
+- **Condition Tracking**: Apply and monitor status effects
+- **Death Saves**: Track successful and failed death saves
+
+### Combatant Management
+
+- **Players**: Add characters from your campaign
+- **NPCs/Monsters**: Quick-add from monster database
+- **Groups**: Manage multiple identical creatures
+- **Custom Entries**: Add arbitrary combatants
+
+### Round Management
+
+- **Round Counter**: Track combat rounds
+- **Turn Timer**: Optional timer for each turn
+- **End-of-Turn Effects**: Automatic tracking of duration-based effects
+- **Initiative Holds**: Allow combatants to delay or hold actions
+
+## Starting Combat
+
+### Quick Start
+
+1. Click "New Combat"
+2. Add combatants (players and enemies)
+3. Click "Roll Initiative"
+4. Begin combat
+
+### Adding Combatants
+
+#### Add Players
+- Select from your campaign's character list
+- Characters automatically include AC, HP, and modifiers
+
+#### Add Monsters
+- Search monster database
+- Add multiple identical creatures as a group
+- HP automatically rolled or use average
+
+#### Manual Entry
+- Add custom combatants
+- Set initiative modifier and HP manually
+
+## During Combat
+
+### Current Turn
+
+The active combatant is highlighted with:
+- Visual indicator
+- Name and stats prominent
+- Available actions listed
+
+### Taking Actions
+
+#### Standard Actions
+- **Attack**: Roll attack and damage
+- **Cast Spell**: Link to spell tracker
+- **Dash/Dodge/Disengage**: Apply effects
+- **Help/Hide**: Apply advantages/conditions
+
+#### Bonus Actions & Reactions
+- Track bonus action usage
+- Mark reaction spent
+- Reset at start of turn
+
+### HP Management
+
+Update hit points:
+- Click HP to edit directly
+- Use +/- buttons for damage/healing
+- Add temporary HP separately
+- Auto-calculate death at 0 HP
+
+### Conditions & Effects
+
+Apply status conditions:
+- Blinded, charmed, frightened, etc.
+- Duration tracking (rounds, concentration)
+- Automatic removal
+- Visual indicators
+
+## Advanced Features
+
+### Legendary Actions
+
+For legendary creatures:
+- Set legendary action count
+- Track usage per round
+- Reset at creature's turn
+
+### Lair Actions
+
+Configure lair actions:
+- Set initiative count (usually 20)
+- List available lair actions
+- Trigger on initiative count
+
+### Custom Effects
+
+Create custom effects:
+- Name and description
+- Duration (rounds, minutes, concentration)
+- Mechanical impact (advantage, disadvantage, etc.)
+
+## Initiative Order
+
+### Sorting
+
+Initiative is sorted by:
+1. Initiative roll (highest to lowest)
+2. Initiative modifier (tiebreaker)
+3. Dexterity score (final tiebreaker)
+
+### Adjusting Initiative
+
+Change initiative during combat:
+- Click initiative value to edit
+- Drag and drop to reorder
+- Hold action to delay turn
+
+### Surprise Round
+
+Handle surprise:
+1. Mark surprised creatures
+2. They can't act on first turn
+3. Automatically cleared after turn
+
+## Status Tracking
+
+### Hit Points
+
+Visual HP indicators:
+- **Green**: Healthy (75-100%)
+- **Yellow**: Injured (25-75%)
+- **Red**: Bloodied (<25%)
+- **Black**: Unconscious/Dead
+
+### Conditions
+
+Common conditions with mechanical effects:
+- **Prone**: Disadvantage on attacks, advantage against
+- **Grappled**: Speed 0
+- **Restrained**: Disadvantage on attacks and Dex saves
+- **Stunned**: Incapacitated, fails Str/Dex saves
+- **Paralyzed**: Incapacitated, fails Str/Dex saves, auto-crit
+- **Unconscious**: As paralyzed, plus prone
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Space` | Next turn |
+| `Shift+Space` | Previous turn |
+| `Ctrl+D` | Deal damage to selected |
+| `Ctrl+H` | Heal selected |
+| `Ctrl+E` | Add effect to selected |
+| `R` | Remove selected from combat |
+| `Esc` | Deselect |
+
+## Combat Log
+
+The combat log tracks:
+- All attacks and damage
+- Healing and HP changes
+- Conditions applied/removed
+- Turn changes and round count
+- Critical hits and misses
+
+### Exporting Combat Log
+
+Save combat records:
+1. Click "Export Log"
+2. Choose format (text, JSON, PDF)
+3. Save for campaign notes
+
+## API Integration
+
+### Start Combat via API
+
+```javascript
+fetch('https://api.threatlvl.games/v1/combat/start', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    combatants: [
+      { name: "Warrior", type: "player", initiative: 18, hp: 45 },
+      { name: "Goblin", type: "npc", initiative: 12, hp: 7, count: 4 }
+    ]
+  })
+})
+.then(response => response.json())
+.then(combat => console.log(combat.turnOrder));
+```
+
+### Update Combatant
+
+```javascript
+fetch('https://api.threatlvl.games/v1/combat/combatant/123/update', {
+  method: 'PATCH',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    hp: 35,
+    conditions: ["prone"]
+  })
+});
+```
+
+## Tips & Tricks
+
+### Pre-Roll Initiative
+
+For recurring NPCs:
+1. Save NPC with pre-rolled initiative
+2. Quick-add to combat
+3. No rolling needed
+
+### Group Initiative
+
+For multiple identical creatures:
+- Roll once for the group
+- They all act on same initiative
+- Reduces table clutter
+
+### Hidden Combatants
+
+For stealth/ambush scenarios:
+- Add combatants
+- Mark as "hidden"
+- Only GM sees them in tracker
+- Reveal when appropriate
+
+### Quick Damage
+
+Use number keys for quick damage:
+1. Select combatant
+2. Type number
+3. Press `-` for damage or `+` for healing
+
+### Combat Templates
+
+Save common encounters:
+1. Build encounter
+2. Save as template
+3. Reuse with one click
+4. Great for random encounters
+
+### Player HP Visibility
+
+Control what players see:
+- **Full**: Exact HP values
+- **Descriptive**: "Wounded", "Bloodied"
+- **Hidden**: Only GM sees HP
+
+### Concentration Checks
+
+When concentrating combatant takes damage:
+1. Automatic concentration check prompt
+2. DC = 10 or half damage
+3. Quick roll with modifier
+4. Auto-remove effect if failed
+

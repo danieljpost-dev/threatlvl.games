@@ -1,0 +1,75 @@
+# Zola Configuration for ThreatLvl Games Documentation
+
+base_url = "https://threatlvl.games"
+title = "ThreatLvl Games - 5e-Compatible Online Game Tools"
+description = "Professional tools for running and playing 5e-compatible tabletop RPG games online"
+default_language = "en"
+
+# Compile Sass files
+compile_sass = true
+
+# Generate a feed
+generate_feed = true
+feed_filename = "rss.xml"
+
+# Build search index
+build_search_index = true
+
+# Taxonomies
+taxonomies = [
+    {name = "tags", feed = true},
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+render_emoji = true
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = true
+
+[extra]
+# Site author
+author = "ThreatLvl Games"
+
+# GitHub repository
+github_repo = "https://github.com/djpost/threatlvl.games"
+
+# Social links
+[extra.social]
+discord = "https://discord.gg/your-invite"
+twitter = "https://twitter.com/threatlvlgames"
+github = "https://github.com/djpost/threatlvl.games"
+
+# Navigation menu
+[[extra.menu]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[extra.menu]]
+name = "Documentation"
+url = "/docs/"
+weight = 2
+
+[[extra.menu]]
+name = "Tools"
+url = "/docs/tools/"
+weight = 3
+
+[[extra.menu]]
+name = "Guides"
+url = "/docs/guides/"
+weight = 4
+
+[[extra.menu]]
+name = "Blog"
+url = "/blog/"
+weight = 5
+
+[[extra.menu]]
+name = "GitHub"
+url = "https://github.com/djpost/threatlvl.games"
+weight = 6
+

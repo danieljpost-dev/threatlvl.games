@@ -1,0 +1,200 @@
++++
+title = "Encounter Builder"
+description = "Design balanced 5e encounters with CR calculations"
+weight = 3
++++
+
+# Encounter Builder
+
+The Encounter Builder helps game masters design balanced and engaging combat encounters using official 5e challenge rating (CR) calculations and encounter building guidelines.
+
+## Features
+
+### Encounter Design
+
+- **CR Calculator**: Automatic encounter difficulty calculation
+- **Monster Browser**: Search and filter from the SRD monster manual
+- **Party Configuration**: Set party size and average level
+- **Difficulty Rating**: Easy, Medium, Hard, or Deadly encounters
+
+### Treasure Generation
+
+- **Automatic Treasure**: Generate appropriate loot for CR
+- **Custom Rewards**: Add specific magic items or gold
+- **Treasure Tables**: Roll on official treasure tables
+
+### Environmental Hazards
+
+Add environmental effects to encounters:
+- Difficult terrain
+- Traps
+- Weather conditions
+- Magical effects
+
+## Building an Encounter
+
+### Step 1: Configure Your Party
+
+1. Enter party size (number of players)
+2. Set average party level
+3. Adjust for special circumstances (short rest availability, etc.)
+
+### Step 2: Select Monsters
+
+1. Browse or search the monster database
+2. Filter by CR, type, or environment
+3. Add monsters to the encounter
+4. Adjust quantities
+
+### Step 3: Review Difficulty
+
+The difficulty indicator shows:
+- **Easy**: Low risk, resource drain unlikely
+- **Medium**: Moderate challenge, some resource use
+- **Hard**: Significant challenge, resource intensive
+- **Deadly**: Potentially fatal, requires tactical play
+
+### Step 4: Add Flavor
+
+Enhance your encounter with:
+- Environmental description
+- Monster tactics and motivations
+- Terrain features
+- Treasure and rewards
+
+## Challenge Rating Calculations
+
+### XP Thresholds
+
+The encounter builder uses official XP thresholds per character level:
+
+| Level | Easy | Medium | Hard | Deadly |
+|-------|------|--------|------|--------|
+| 1 | 25 | 50 | 75 | 100 |
+| 2 | 50 | 100 | 150 | 200 |
+| 3 | 75 | 150 | 225 | 400 |
+| 4 | 125 | 250 | 375 | 500 |
+| 5 | 250 | 500 | 750 | 1,100 |
+
+### Encounter Multipliers
+
+The tool automatically applies multipliers based on monster quantity:
+
+- **1 monster**: ×1.0
+- **2 monsters**: ×1.5
+- **3-6 monsters**: ×2.0
+- **7-10 monsters**: ×2.5
+- **11-14 monsters**: ×3.0
+- **15+ monsters**: ×4.0
+
+## Monster Database
+
+### Searching Monsters
+
+Filter monsters by:
+- **Name**: Search by creature name
+- **CR**: Filter by challenge rating range
+- **Type**: Beast, humanoid, undead, etc.
+- **Environment**: Forest, dungeon, arctic, etc.
+- **Size**: Tiny to gargantuan
+
+### Monster Information
+
+Each monster entry includes:
+- Full stat block
+- Special abilities
+- Actions and legendary actions
+- Lore and description
+- Tactics and combat notes
+
+## Random Encounters
+
+Generate random encounters based on:
+- Environment type
+- Party level
+- Desired difficulty
+- Theme (e.g., undead, beasts, humanoids)
+
+### Example Random Encounter
+
+```javascript
+{
+  environment: "forest",
+  partyLevel: 5,
+  difficulty: "medium"
+}
+```
+
+Might generate:
+- 2 Owlbears (CR 3 each)
+- 1 Druid (CR 2)
+- Forest terrain with difficult undergrowth
+
+## Saving and Sharing
+
+### Save Encounters
+
+Save encounters for later use:
+1. Click "Save Encounter"
+2. Name your encounter
+3. Add to campaign or library
+
+### Share with Players
+
+Share encounter information:
+1. Click "Share"
+2. Choose what to reveal:
+   - Monster stat blocks
+   - Map and terrain
+   - Treasure (hide until discovered)
+3. Generate share link
+
+## API Integration
+
+### Create Encounter via API
+
+```javascript
+fetch('https://api.threatlvl.games/v1/encounter/create', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    partySize: 4,
+    partyLevel: 5,
+    monsters: [
+      { id: "goblin", quantity: 6 },
+      { id: "goblin-boss", quantity: 1 }
+    ]
+  })
+})
+.then(response => response.json())
+.then(encounter => console.log(encounter.difficulty));
+```
+
+## Tips & Tricks
+
+### Action Economy
+
+Remember that action economy matters more than raw CR:
+- Multiple weak monsters can overwhelm high-level parties
+- Single boss monsters may be ineffective without minions
+
+### Environmental Advantages
+
+Use terrain to make encounters more dynamic:
+- High ground provides advantage
+- Cover protects ranged attackers
+- Difficult terrain slows melee combatants
+
+### Wave Encounters
+
+Design encounters in waves:
+- Start with initial monsters
+- Reinforce on round 3-4
+- Adjust based on party performance
+
+### Budget Your Resources
+
+For a full adventuring day, aim for:
+- 6-8 medium encounters, or
+- 2-3 deadly encounters with short rests
+
