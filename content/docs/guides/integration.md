@@ -239,7 +239,7 @@ Need help integrating?
 
 - Email: integrations@threatlvl.games
 - Documentation: [API Reference](/docs/guides/api-reference/)
-- Examples: [GitHub Repository](https://github.com/djpost/threatlvl.games-examples)
+- Examples: [GitHub Repository](https://github.com/danieljpost-dev/threatlvl.games-examples)
 
 ### Community Integrations
 

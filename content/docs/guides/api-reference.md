@@ -419,7 +419,7 @@ roll = client.dice.roll('1d20+5')
 
 ### Documentation
 - Full docs: https://threatlvl.games/docs/
-- GitHub: https://github.com/djpost/threatlvl.games
+- GitHub: https://github.com/danieljpost-dev/threatlvl.games
 
 ### Contact
 - Email: api@threatlvl.games

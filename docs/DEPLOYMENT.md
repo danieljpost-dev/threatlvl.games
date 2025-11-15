@@ -434,5 +434,5 @@ gcloud logging read "resource.type=http_load_balancer"
 For deployment issues:
 - AWS Support: https://console.aws.amazon.com/support
 - GCP Support: https://console.cloud.google.com/support
-- Project Issues: https://github.com/djpost/threatlvl.games/issues
+- Project Issues: https://github.com/danieljpost-dev/threatlvl.games/issues
 

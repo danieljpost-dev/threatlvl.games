@@ -50,7 +50,7 @@ ThreatLvl Games provides five core tools for running and playing 5e-compatible t
 
 2. **Clone the repository**
    ```bash
-   git clone https://github.com/djpost/threatlvl.games.git
+   git clone https://github.com/danieljpost-dev/threatlvl.games.git
    cd threatlvl.games
    ```
 
@@ -302,7 +302,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Website:** [threatlvl.games](https://threatlvl.games)
 - **Documentation:** [threatlvl.games/docs](https://threatlvl.games/docs)
 - **API Reference:** [threatlvl.games/docs/guides/api-reference](https://threatlvl.games/docs/guides/api-reference)
-- **GitHub:** [github.com/djpost/threatlvl.games](https://github.com/djpost/threatlvl.games)
+- **GitHub:** [github.com/danieljpost-dev/threatlvl.games](https://github.com/danieljpost-dev/threatlvl.games)
 - **Discord:** [discord.gg/your-invite](https://discord.gg/your-invite)
 
 ## 🙏 Acknowledgments
@@ -314,7 +314,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/djpost/threatlvl.games/issues)
+- **Issues:** [GitHub Issues](https://github.com/danieljpost-dev/threatlvl.games/issues)
 - **Email:** support@threatlvl.games
 - **Discord:** [Join our community](https://discord.gg/your-invite)
 

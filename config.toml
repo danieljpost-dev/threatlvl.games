@@ -34,13 +34,13 @@ smart_punctuation = true
 author = "ThreatLvl Games"
 
 # GitHub repository
-github_repo = "https://github.com/djpost/threatlvl.games"
+github_repo = "https://github.com/danieljpost-dev/threatlvl.games"
 
 # Social links
 [extra.social]
 discord = "https://discord.gg/your-invite"
 twitter = "https://twitter.com/threatlvlgames"
-github = "https://github.com/djpost/threatlvl.games"
+github = "https://github.com/danieljpost-dev/threatlvl.games"
 
 # Navigation menu
 [[extra.menu]]
@@ -70,6 +70,6 @@ weight = 5
 
 [[extra.menu]]
 name = "GitHub"
-url = "https://github.com/djpost/threatlvl.games"
+url = "https://github.com/danieljpost-dev/threatlvl.games"
 weight = 6
 
