@@ -299,6 +299,80 @@ GET /encounters/{id}
 GET /encounters
 ```
 
+## Campaigns Endpoint
+
+### List Campaigns
+
+```http
+GET /campaigns
+```
+
+### Get Campaign
+
+```http
+GET /campaigns/{id}
+```
+
+### Create Campaign
+
+```http
+POST /campaigns
+```
+
+Request Body:
+```json
+{
+  "name": "Lost Mine of Phandelver",
+  "description": "A classic adventure",
+  "system": "5e"
+}
+```
+
+## Webhooks Endpoint
+
+### Register Webhook
+
+```http
+POST /webhooks
+```
+
+Request Body:
+```json
+{
+  "url": "https://your-server.com/webhook",
+  "events": [
+    "character.created",
+    "character.updated",
+    "combat.started",
+    "combat.ended"
+  ]
+}
+```
+
+### List Webhooks
+
+```http
+GET /webhooks
+```
+
+### Delete Webhook
+
+```http
+DELETE /webhooks/{id}
+```
+
+### Webhook Events
+
+Available event types:
+- `character.created`
+- `character.updated`
+- `character.deleted`
+- `combat.started`
+- `combat.ended`
+- `combat.turn_changed`
+- `spell.cast`
+- `dice.rolled`
+
 ## Error Codes
 
 | Code | Description |
