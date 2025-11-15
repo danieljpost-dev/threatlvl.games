@@ -6,7 +6,7 @@ weight = 3
 
 # API Reference
 
-Complete reference for the ThreatLvl Games REST API.
+Complete reference for the ThreatLVL Games REST API.
 
 ## Base URL
 
@@ -20,7 +20,7 @@ All API requests require authentication using an API key.
 
 ### Getting an API Key
 
-1. Log in to ThreatLvl Games
+1. Log in to ThreatLVL Games
 2. Go to Account Settings → API
 3. Click "Generate New Key"
 4. Copy and store securely
@@ -392,9 +392,9 @@ npm install @threatlvl/games-js
 ```
 
 ```javascript
-import { ThreatLvlClient } from '@threatlvl/games-js';
+import { ThreatLVLClient } from '@threatlvl/games-js';
 
-const client = new ThreatLvlClient('YOUR_API_KEY');
+const client = new ThreatLVLClient('YOUR_API_KEY');
 
 const character = await client.characters.get('char_123');
 const roll = await client.dice.roll('1d20+5');
@@ -407,9 +407,9 @@ pip install threatlvl-games
 ```
 
 ```python
-from threatlvl import ThreatLvlClient
+from threatlvl import ThreatLVLClient
 
-client = ThreatLvlClient('YOUR_API_KEY')
+client = ThreatLVLClient('YOUR_API_KEY')
 
 character = client.characters.get('char_123')
 roll = client.dice.roll('1d20+5')

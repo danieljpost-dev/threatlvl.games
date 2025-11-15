@@ -1,12 +1,12 @@
 +++
 title = "Integration Guide"
-description = "Integrate ThreatLvl Games with other tools and platforms"
+description = "Integrate ThreatLVL Games with other tools and platforms"
 weight = 2
 +++
 
 # Integration Guide
 
-Learn how to integrate ThreatLvl Games with other tools and platforms to enhance your gaming experience.
+Learn how to integrate ThreatLVL Games with other tools and platforms to enhance your gaming experience.
 
 ## Virtual Tabletop Platforms
 
@@ -41,7 +41,7 @@ Features:
 
 1. Open Foundry VTT
 2. Go to Add-on Modules
-3. Search "ThreatLvl Games"
+3. Search "ThreatLVL Games"
 4. Install and activate
 
 #### Configuration
@@ -80,7 +80,7 @@ Import from D&D Beyond:
 
 ### Discord Bot
 
-Add ThreatLvl Bot to your server:
+Add ThreatLVL Bot to your server:
 
 #### Setup
 
@@ -164,7 +164,7 @@ For complete API documentation, see the [API Reference](/docs/guides/api-referen
 Create Siri shortcuts:
 
 1. Download iOS Shortcuts app
-2. Import ThreatLvl shortcuts
+2. Import ThreatLVL shortcuts
 3. Use voice commands:
    - "Roll initiative"
    - "Check my character"
@@ -193,7 +193,7 @@ Display game info on stream:
 
 ### Twitch Extension
 
-Install ThreatLvl Twitch extension:
+Install ThreatLVL Twitch extension:
 
 Features:
 - Show initiative tracker to viewers
@@ -205,7 +205,7 @@ Features:
 
 ### Compatible Tools
 
-ThreatLvl works with:
+ThreatLVL works with:
 
 - **Avrae**: Discord dice roller
 - **Fight Club 5e**: iOS/Android reference app

@@ -1,10 +1,10 @@
 +++
-title = "ThreatLvl Games"
+title = "ThreatLVL Games"
 description = "Professional 5e-Compatible Online Game Tools"
 template = "index.html"
 +++
 
-# ThreatLvl Games
+# ThreatLVL Games
 
 Professional 5e-Compatible Online Game Tools
 
