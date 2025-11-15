@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer').themes.github;
-const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+const lightCodeTheme = require('prism-react-renderer').themes.nightOwl;
+const darkCodeTheme = require('prism-react-renderer').themes.palenight;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +16,7 @@ const config = {
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'djpost', // Usually your GitHub org/user name.
+  organizationName: 'danieljpost-dev', // Usually your GitHub org/user name.
   projectName: 'threatlvl.games', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
