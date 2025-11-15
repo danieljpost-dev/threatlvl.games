@@ -1,7 +1,7 @@
-# Zola Configuration for ThreatLvl Games Documentation
+# Zola Configuration for ThreatLVL Games Documentation
 
 base_url = "https://threatlvl.games"
-title = "ThreatLvl Games - 5e-Compatible Online Game Tools"
+title = "ThreatLVL Games - 5e-Compatible Online Game Tools"
 description = "Professional tools for running and playing 5e-compatible tabletop RPG games online"
 default_language = "en"
 
@@ -31,7 +31,7 @@ smart_punctuation = true
 
 [extra]
 # Site author
-author = "ThreatLvl Games"
+author = "ThreatLVL Games"
 
 # GitHub repository
 github_repo = "https://github.com/danieljpost-dev/threatlvl.games"

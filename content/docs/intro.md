@@ -1,12 +1,12 @@
 +++
 title = "Introduction"
-description = "Welcome to ThreatLvl Games"
+description = "Welcome to ThreatLVL Games"
 weight = 1
 +++
 
-# Welcome to ThreatLvl Games
+# Welcome to ThreatLVL Games
 
-ThreatLvl Games provides a comprehensive suite of online tools designed specifically for running and playing 5e-compatible tabletop RPG games. Our platform is built with game masters and players in mind, offering intuitive interfaces and powerful features to enhance your gaming experience.
+ThreatLVL Games provides a comprehensive suite of online tools designed specifically for running and playing 5e-compatible tabletop RPG games. Our platform is built with game masters and players in mind, offering intuitive interfaces and powerful features to enhance your gaming experience.
 
 ## What We Offer
 
@@ -43,7 +43,7 @@ Our toolkit includes five core applications:
 
 ## Getting Started
 
-Ready to enhance your game? Check out our [Getting Started Guide](/docs/guides/getting-started/) to begin using ThreatLvl Games tools in your campaigns.
+Ready to enhance your game? Check out our [Getting Started Guide](/docs/guides/getting-started/) to begin using ThreatLVL Games tools in your campaigns.
 
 ## Community & Support
 
@@ -55,5 +55,5 @@ Join our community to share feedback, request features, and connect with other p
 
 ## Open Game License
 
-ThreatLvl Games is compatible with the 5th Edition System Reference Document (SRD) under the Open Game License (OGL). We respect Wizards of the Coast's intellectual property and only include content available through the SRD.
+ThreatLVL Games is compatible with the 5th Edition System Reference Document (SRD) under the Open Game License (OGL). We respect Wizards of the Coast's intellectual property and only include content available through the SRD.
 

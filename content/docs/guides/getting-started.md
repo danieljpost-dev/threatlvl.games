@@ -1,12 +1,12 @@
 +++
 title = "Getting Started"
-description = "Get started with ThreatLvl Games"
+description = "Get started with ThreatLVL Games"
 weight = 1
 +++
 
-# Getting Started with ThreatLvl Games
+# Getting Started with ThreatLVL Games
 
-Welcome to ThreatLvl Games! This guide will help you set up your account and start using our 5e-compatible online game tools.
+Welcome to ThreatLVL Games! This guide will help you set up your account and start using our 5e-compatible online game tools.
 
 ## Account Setup
 
@@ -178,21 +178,21 @@ When players join:
 
 ## Integration with Virtual Tabletops
 
-ThreatLvl Games works alongside popular VTTs:
+ThreatLVL Games works alongside popular VTTs:
 
 ### Roll20
 - Use for maps and tokens
-- Use ThreatLvl for character management
+- Use ThreatLVL for character management
 - Share dice rolls both places
 
 ### Foundry VTT
 - Import characters via API
 - Sync initiative tracker
-- Use ThreatLvl for prep work
+- Use ThreatLVL for prep work
 
 ### Theater of the Mind
 - No map needed
-- Full toolkit in ThreatLvl
+- Full toolkit in ThreatLVL
 - Focus on narrative
 
 ## Mobile Usage
