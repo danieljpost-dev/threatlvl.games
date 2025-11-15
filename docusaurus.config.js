@@ -45,11 +45,11 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/djpost/threatlvl.games/tree/main/',
+          editUrl: 'https://github.com/danieljpost-dev/threatlvl.games/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/djpost/threatlvl.games/tree/main/',
+          editUrl: 'https://github.com/danieljpost-dev/threatlvl.games/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -78,7 +78,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/djpost/threatlvl.games',
+            href: 'https://github.com/danieljpost-dev/threatlvl.games',
             label: 'GitHub',
             position: 'right',
           },
@@ -122,7 +122,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/djpost/threatlvl.games',
+                href: 'https://github.com/danieljpost-dev/threatlvl.games',
               },
             ],
           },
