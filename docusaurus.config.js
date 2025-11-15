@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.palenight;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ThreatLvl Games',
+  title: 'ThreatLVL Games',
   tagline: '5e-Compatible Online Game Tools',
   favicon: 'img/favicon.ico',
 
@@ -66,12 +66,12 @@ const config = {
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
-        respectPrefersColorScheme: false,
+        respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'ThreatLvl Games',
+        title: 'ThreatLVL Games',
         logo: {
-          alt: 'ThreatLvl Games Logo',
+          alt: 'ThreatLVL Games Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -132,7 +132,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ThreatLvl Games. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ThreatLVL Games. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
